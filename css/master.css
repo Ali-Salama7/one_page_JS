@@ -1,0 +1,242 @@
+:root{
+    --main-color: #95bdc7;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Start Setting Box */
+.setting-box{
+    position: fixed;
+    left: -200px;
+    top: 0;
+    width: 200px;
+    min-height: 100vh;
+    background-color: #fff;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+@media (max-width: 700px) {
+    .setting-box{
+        width: 160px;
+    }
+    
+}
+
+.setting-box.open {
+    left: 0;
+}
+
+.setting-box .toggle-setting{
+    position: absolute;
+    right: -32px;
+    top: 125px;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.setting-box .toggle-setting .gear{
+    width: 32px;
+    padding: 8px 0;
+}
+
+.setting-box .option-box {
+    padding: 20px;
+}
+
+.setting-box .option-box h4 {
+    margin: 0;
+    color: #666;
+}
+
+.setting-box .option-box .colors-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.setting-box .option-box .colors-list li {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: .5;
+    display: inline-block;
+}
+
+.setting-box .option-box .colors-list li.active {
+    opacity: 1;
+}
+
+.setting-box .option-box .colors-list li:first-child {
+    background-color: #95bdc7;
+}
+
+.setting-box .option-box .colors-list li:nth-child(2) {
+    background-color: #E91E63;
+}
+
+.setting-box .option-box .colors-list li:nth-child(3) {
+    background-color: #009688;
+}
+
+.setting-box .option-box .colors-list li:nth-child(4) {
+    background-color: #03A9F4;
+}
+
+.setting-box .option-box .colors-list li:nth-child(5) {
+    background-color: #117463;
+}
+
+/* End Setting Box */
+
+/* Start Landing */
+.landing-page {
+    min-height: 100vh;
+    background-image: url(../img/06.avif);
+    background-size: cover;
+    position: relative;
+}
+
+.landing-page .overlay {
+    background-color: #00000029;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.landing-page .header-area{
+    position: relative;
+    color: #fff;
+    z-index: 2;
+    display: flex;
+    padding: 5px;
+}
+
+/* .header-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.header-area .logo {
+    width: 300px;
+    padding: 15px;
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header-area .links {
+    width: 100%;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 30px;
+    font-weight: bold;
+    /* display: none; */
+
+}
+
+.header-area .links li {
+    display: inline-block;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.header-area .links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header-area .links li a:hover,
+.header-area .links li a.active{
+    color: var(--main-color);
+}
+
+.header-area .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+}
+
+@media (max-width: 700px) {
+    .header-area .links {
+        display: block;
+    }
+}
+
+@media (min-width: 600px) {
+    .menu-toggle i {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-area .links {
+        display: none;
+        flex-direction: column;
+        background: #ffffff4d;
+        position: relative;
+        top: 47px;
+        align-items: end;
+        width: 98px;
+    }
+
+    .header-area .links li {
+        padding: 10px;
+        
+    }
+
+    .menu-toggle i {
+        display: block;
+        margin-top: 18px;
+    }
+}
+
+.landing-page .introduction-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    text-align: center;
+}
+
+.landing-page .introduction-text h1{
+    font-size: 40px;
+    margin: 0 0 14px;
+}
+
+
+.landing-page .introduction-text h1 span{
+    color: var(--main-color);
+}
+
+.landing-page .introduction-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 390px) {
+    .landing-page .introduction-text h1{
+        font-size: 33px;
+    }
+    
+    .landing-page .introduction-text p {
+        font-size: 12px;
+    }
+}
+/* End Landing */
